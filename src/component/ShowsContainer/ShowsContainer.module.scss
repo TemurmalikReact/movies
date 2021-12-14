@@ -1,0 +1,59 @@
+.wrapper {
+  padding: 10px 10%;
+
+  .sort_wrapper {
+    padding: 5px 5px 5px 13px;
+    width: 270px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 2px solid #000;
+    background: rgba(200, 200, 220, 0.15);
+    transition: all .2s ease;
+    font-size: 12px;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    
+    &:hover {
+      background: rgba(100, 100, 120, 0.2);
+    }
+  }
+
+  .sort_btn {
+    width: 258px;
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 30);
+    border-top: none;
+    position: absolute;
+    margin-left: 6px;
+    box-shadow: 0 0 5px rgb(130, 130, 130);
+    background: #fff;
+    font-size: 12px;
+    transition: all 5s linear;
+    
+    & > div {
+      border: 1px solid rgba(175, 175, 175, 0.5);
+      padding: 5px 10px;
+
+      &:hover {
+        background: rgba(100, 100, 120, 0.2);
+      }
+  
+      &.active {
+        background: rgba(255, 255, 100, 0.8) !important;     
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .wrapper {
+    padding: 10px 5%;
+  }
+}
